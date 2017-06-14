@@ -50,7 +50,7 @@ if __name__ =='__main__':
     train_groudTruth = np.array(train_groudTruth)
     test_codes = np.array(test_codes)
     test_groudTruth = np.array(test_groudTruth)
-    numOfTest = 1000
+    numOfTest = 10000
 
     # generate hanmming martix, g.t. martix  10000*50000
     gt_martix = np.dot(test_groudTruth, np.transpose(train_groudTruth))
