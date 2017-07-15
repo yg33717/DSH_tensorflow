@@ -160,7 +160,8 @@ def train():
     label = tf.placeholder(tf.float32, [BATCH_SIZE,10], name='label')
 
     alpha = tf.constant(0.01,dtype=tf.float32,name='tradeoff')
-    m = tf.constant(96.,dtype=tf.float32,name='bi_margin')
+    # set m = 2*HASHING_BITS
+    m = tf.constant(HASHING_BITS*2,dtype=tf.float32,name='bi_margin')
     d_loss_real = hashing_loss(image,label,alpha,m)
     
     
